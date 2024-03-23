@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.083,C:\Users\user\Desktop\Lab\ЭВМ\4\Unit1.dfm=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.331,=C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\Buffer.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.387,=C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\Stack.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.379,=C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\List.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.709,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.150,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.811,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.083,C:\Users\user\Desktop\Lab\ЭВМ\4\Unit1.cpp=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.416,C:\Users\user\Desktop\Lab\ЭВМ\4\Project1.cbproj=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.083,C:\Users\user\Desktop\Lab\ЭВМ\4\Unit1.h=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.399,=C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\Translator.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.143,C:\Users\user\Desktop\Lab\ЭВМ\4\Project1PCH1.h=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.631,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.527,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.921,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+  </Transactions>
+</BorlandProject>

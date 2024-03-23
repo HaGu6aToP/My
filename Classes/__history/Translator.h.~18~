@@ -1,0 +1,223 @@
+// ---------------------------------------------------------------------------
+
+#ifndef TranslatorH
+#define TranslatorH
+#include "List.h"
+#include "Buffer.h"
+#include "Stack.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+
+namespace MyClasses {
+	int len(const char* const str);
+	bool compare(char* s1, char* s2);
+	void printString(char* str);
+	void copyStr(char*& str, char* copyStr);
+	void concatenateStr(char*& str1, const char* const str2);
+	bool inStr(char c, const char* const str);
+	bool isNumber(char c);
+	bool isLetter(char c);
+	const char* const RUSLETTERS = "абвгдеёжзийклмнопрстуфхчцшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+	char* charToStr(char c);
+	int wordInStr(const char* const word, const char* const str);
+
+
+	class Error{
+	public:
+		Error();
+		virtual char* getStr() const {return "";}
+	};
+
+	class FileError: public Error{
+		char* FileName;
+	public:
+		FileError(char* filename): FileName{filename}{}
+		char* getStr() const override;
+	};
+
+	class LexicalBlockError: public Error{
+		int letter_num;
+		char letter;
+	public:
+		LexicalBlockError(int n, char c): Error{}{}
+		char* getStr() const override;
+	};
+
+	class SyntaxBlockError: public Error{
+		char* s;
+	public:
+		SyntaxBlockError(char* ss): s(ss){}
+		char* getStr() const override;
+	};
+
+	class Сompiler{
+	/*
+		1, Идентификатор
+		2, Целое число
+		3, if
+		4, else
+		5, ДЛЯ
+		6, КОНЕЦ
+		7, (
+		8, )
+		9, ;
+		10, ,
+		11, :=
+		12, +
+		13, /
+		14, >=
+		15 ==
+	*/
+	public:
+		class TableOfIdentifiers {
+		public:
+			friend class LexicalBlock;
+			struct Identifier {
+			public:
+				char* Name;
+				int* Attribute;
+				int Type;
+
+				Identifier();
+				Identifier(char* name, int* attribute, int type);
+				~Identifier();
+			};
+
+			List<Identifier*>table_m;
+		public:
+
+
+			TableOfIdentifiers();
+
+			void append(char* name, int* attribute, int type);
+			void remove(char* name);
+			Identifier* get(char* name);
+			Identifier* get(int num);
+			int size(){return table_m.size();}
+			const List<Identifier*>& toList();
+			void clear();
+			void print();
+
+		public:
+			List<Identifier*>::Iterator find(char* name);
+		};
+
+		class LexicalBlock {
+
+			// Незначащие символы
+			static char DEFAULT_WHITESPACES[];
+
+			static constexpr int MAXIDLEN = 10;
+
+			// Разбираемая строка
+			char* sourse_m;
+			int currentChar_m;
+			int len_m;
+
+			static const char* KEYWORDS;
+
+			//Буфер
+			Buffer<char> buffer;
+		public:
+
+			LexicalBlock();
+			LexicalBlock(char* sourse);
+			void put(char* sourse);
+
+			static void DoNothing() {
+				std::cout << "Do nothing";
+			}
+
+			List<TableOfIdentifiers::Identifier*> work();
+			TableOfIdentifiers::Identifier* getLexeme();
+
+		private:
+
+			//Состояния автомата
+			enum State{s, kw, se, op, id, it, f, err};
+
+			//Шаг автомата
+			TableOfIdentifiers::Identifier* step(State &t);
+		};
+
+
+
+		class SyntaxBlock{
+			enum StoreSymbols{
+				Start,
+				Op,
+				Assign, // :=
+				Semicolon, // ;
+				OpBracket, // (
+				ClBracket, // )
+				Id,
+				Comma, // ,
+				End, // Конец
+				Op_s,
+				End2, // <End>
+				E,
+				E_list,
+				T,
+				T_list,
+				F,
+				Bool_expr,
+				Bool_op,
+				Stop,
+				a_Assign // {Присвоить}
+			};
+
+
+
+		class Slot{
+			StoreSymbols m_symbol;
+			int **m_attributes = nullptr;
+			int m_attributesCount;
+		public:
+			Slot():m_symbol{}, m_attributesCount{0} {}
+			Slot(StoreSymbols s, int attributesCount = 0);
+			Slot(const Slot& item);
+
+			int** getAttributes(){ return m_attributes; }
+			StoreSymbols getSymbol(){ return m_symbol; }
+			int attributesCount(){ return m_attributesCount; }
+			~Slot();
+		};
+
+		public:
+		// Таблицы идентификаторов
+			static TableOfIdentifiers id_table_s;
+			static TableOfIdentifiers int_table_s;
+
+		public:
+			const int N;
+			int *data[2];
+
+			SyntaxBlock(int n = 100);
+			~SyntaxBlock();
+
+			int allocMem();
+			bool freeMem(int i);
+
+			void work(char* FileName);
+			void WorkWithSourse(char* sourse);
+		private:
+			static MyClasses::Stack<Slot> store;
+			void step(TableOfIdentifiers::Identifier*& input);
+		};
+
+
+
+		class Translator{
+
+		};
+
+		class Interpreter{
+
+		};
+
+	};
+
+
+}
+#endif

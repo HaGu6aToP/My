@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.150,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.921,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.631,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.811,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2023.12.05 12:37:37.522,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2023.12.05 12:37:37.765,=C:\Users\user\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2023.12.05 12:37:54.221,C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\File1.cpp=C:\Users\user\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2023.12.05 12:37:56.548,C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\Project1PCH1.h=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2023.12.05 12:38:01.388,C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\Project1.cbproj=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2023.12.05 12:38:21.866,=C:\Users\user\Desktop\Lab\ЭВМ\3\Classes\Buffer.cpp</Transaction>
+    <Transaction>2023.12.05 12:38:21.918,=C:\Users\user\Desktop\Lab\ЭВМ\3\Classes\List.cpp</Transaction>
+    <Transaction>2023.12.05 12:38:21.969,=C:\Users\user\Desktop\Lab\ЭВМ\3\Classes\Stack.cpp</Transaction>
+    <Transaction>2023.12.05 12:38:22.140,=C:\Users\user\Desktop\Lab\ЭВМ\3\Classes\Translator.cpp</Transaction>
+    <Transaction>2023.12.05 12:39:03.027,C:\Users\user\Desktop\Lab\ЭВМ\3\Classes\Buffer.cpp=</Transaction>
+    <Transaction>2023.12.05 12:39:05.661,C:\Users\user\Desktop\Lab\ЭВМ\3\Classes\List.cpp=</Transaction>
+    <Transaction>2023.12.05 12:39:09.190,C:\Users\user\Desktop\Lab\ЭВМ\3\Classes\Stack.cpp=</Transaction>
+    <Transaction>2023.12.05 12:39:11.601,C:\Users\user\Desktop\Lab\ЭВМ\3\Classes\Translator.cpp=</Transaction>
+    <Transaction>2023.12.05 12:39:59.381,=C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\Buffer.cpp</Transaction>
+    <Transaction>2023.12.05 12:39:59.390,=C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\List.cpp</Transaction>
+    <Transaction>2023.12.05 12:39:59.398,=C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\Stack.cpp</Transaction>
+    <Transaction>2023.12.05 12:39:59.416,=C:\Users\user\Desktop\Lab\ЭВМ\4\Classes\Translator.cpp</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="File1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="Buffer.cpp"/>
+    <File Path="Buffer.cpp"/>
+    <File Path="Buffer.h"/>
+    <File Path="List.cpp"/>
+    <File Path="List.cpp"/>
+    <File Path="List.h"/>
+    <File Path="Stack.cpp"/>
+    <File Path="Stack.cpp"/>
+    <File Path="Stack.h"/>
+    <File Path="Translator.cpp"/>
+    <File Path="Translator.cpp"/>
+    <File Path="Translator.h"/>
+  </ProjectSortOrder>
+</BorlandProject>
